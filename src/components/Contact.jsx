@@ -29,24 +29,22 @@ export default function Contact({ onNavClick }) {
               <div className="contact-icon"><span className="iconify" data-icon="lucide:mail" /></div>
               <div>
                 <div className="contact-label">Email</div>
-                <div className="contact-value"><a href="mailto:ieeecognia@gmail.com">ieeecognia@gmail.com</a></div>
+                <div className="contact-value"><a href="mailto:cognia@iem.edu.in">cognia@iem.edu.in</a></div>
               </div>
             </div>
 
             <div className="contact-item">
-              <div className="contact-icon"><span className="iconify" data-icon="lucide:message-circle" /></div>
+              <div className="contact-icon"><span className="iconify" data-icon="lucide:phone" /></div>
               <div>
-                <div className="contact-label">WhatsApp Support</div>
+                <div className="contact-label">Phone Support</div>
                 <div className="contact-value">
-                  <a href="https://wa.me/917502217554" target="_blank" rel="noopener">xxxxxxxxxxx</a>
-                  &nbsp;/&nbsp;
-                  <a href="https://wa.me/919487248689" target="_blank" rel="noopener">xxxxxxxxxx</a>
+                  <a href="tel:+919051209545">+91 9051209545</a>
                 </div>
               </div>
             </div>
 
             <div className="contact-note">
-              For conference-related queries, registration assistance, paper submission support and general information, kindly contact us via WhatsApp or Email.
+              For conference-related queries, registration assistance, paper submission support and general information, kindly contact us via Phone or Email.
             </div>
           </div>
 
