@@ -15,6 +15,7 @@ import NationalCommittee from './committee/NationalCommittee'
 import InternationalCommittee from './committee/InternationalCommittee'
 import PaymentDetails from './Payment/PaymentDetails'
 import Guidelines from './components/guidlines'
+import SubmitPaper from './components/SubmitPaper'
 
 const SUB_PAGE_MAP = {
   'conference-committee': 'conference',
@@ -22,7 +23,7 @@ const SUB_PAGE_MAP = {
   'international-committee': 'international',
   'registration': 'payment',
   'registration-fees': 'payment-fees',
-  'submit-paper': 'payment-submit',
+  'submit-paper': 'submit-paper',
   'guidelines': 'guidelines',
 }
 
@@ -111,13 +112,24 @@ export default function App() {
     )
   }
   // key={page} forces full remount so scroll-to-top fires and it feels like a new page
-  if (page === 'payment' || page === 'payment-fees' || page === 'payment-submit') {
-    const section = page === 'payment-fees' ? 'fees' : page === 'payment-submit' ? 'submit' : null
+  if (page === 'payment' || page === 'payment-fees') {
+    const section = page === 'payment-fees' ? 'fees' : null
     return (
       <>
         <ScrollProgress />
         <Navbar onNavClick={handleNavFromSubPage} onSubPage={handleSubPage} activePage={page} />
         <PaymentDetails key={page} section={section} />
+        <Footer onNavClick={handleNavFromSubPage} />
+        <BackToTop />
+      </>
+    )
+  }
+  if (page === 'submit-paper') {
+    return (
+      <>
+        <ScrollProgress />
+        <Navbar onNavClick={handleNavFromSubPage} onSubPage={handleSubPage} activePage={page} />
+        <SubmitPaper />
         <Footer onNavClick={handleNavFromSubPage} />
         <BackToTop />
       </>

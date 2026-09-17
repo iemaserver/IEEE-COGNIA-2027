@@ -143,7 +143,7 @@ export default function PaymentDetails() {
         {/* CTA Button */}
         <div className="payment-cta reveal">
           <a
-            href="mailto:xxxxxxxxxxxx?subject=Registration Query - IEEE COGNIA 2027"
+            href="mailto:cognia@iem.edu.in?subject=Registration Query - IEEE COGNIA 2027"
             className="btn-primary"
             style={{ width: '100%', maxWidth: '400px', justifyContent: 'center', display: 'inline-flex' }}
           >

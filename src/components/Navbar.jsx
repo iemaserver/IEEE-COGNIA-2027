@@ -13,9 +13,9 @@ const LOGOS = [
 ]
 
 const CONTACT = {
-  email: 'ieeecognia@gmail.com',
-  phone: '+91 XXXXXXXXXX',
-  phoneHref: 'tel:+91XXXXXXXXXX',
+  email: 'cognia@iem.edu.in',
+  phone: '+91 9051209545',
+  phoneHref: 'tel:+91 9051209545',
 }
 
 const SOCIALS = [
@@ -60,7 +60,7 @@ const CHILD_PAGE_MAP = {
   'national-committee': 'national',
   'international-committee': 'international',
   'registration-fees': 'payment-fees',
-  'submit-paper': 'payment-submit',
+  'submit-paper': 'submit-paper',
   guidelines: 'guidelines',
 }
 

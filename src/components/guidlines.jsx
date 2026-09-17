@@ -353,7 +353,7 @@ export default function Guidelines() {
 
         <div className="guidelines-cta reveal">
           <a
-            href="mailto:xxxxxxxxxxxx?subject=Guidelines Query - IEEE COGNIA 2027"
+            href="mailto:cognia@iem.edu.in?subject=Guidelines Query - IEEE COGNIA 2027"
             className="btn-primary"
             style={{ width: '100%', maxWidth: '400px', justifyContent: 'center', display: 'inline-flex' }}
           >
