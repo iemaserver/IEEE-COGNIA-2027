@@ -276,7 +276,7 @@ body {
 
 /* Make the first image (IEM) noticeably bigger */
 .partner-logo:first-child img {
-  height: 5px !important; 
+  height: 57px !important; 
 }
 
 /* 60% Pop-out Hover Effect */
@@ -291,7 +291,7 @@ body {
 }
 
 .site-header.scrolled .partner-logo:first-child img {
-  height: 5px !important; 
+  height: 57px !important; 
 }
 
 .site-header.scrolled .partner-logo img {
