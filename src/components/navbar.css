@@ -125,16 +125,17 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 0 0 32px; /* 0 padding on the right */
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 24px;
   align-items: center;
-  justify-content: space-between;
 }
 
 .partner-logos {
   display: flex;
   align-items: center;
   justify-content: flex-end; /* Aligns contents to the right */
-  margin-left: auto; /* Pushes the entire block to the extreme right */
+  margin-left: 0;
 }
 
 .partner-logo {
@@ -160,24 +161,34 @@ body {
   flex-shrink: 0;
 }
 
-.brand-mark {
-  width: 46px;
-  height: 46px;
-  flex-shrink: 0;
-  transition: width 0.4s ease, height 0.4s ease;
+/* Uses the open space between the conference identity and partner logos. */
+.cmt-acknowledgment {
+  width: min(100%, 420px);
+  min-width: 0;
+  padding: 4px 0;
+  color: #000000;
+  text-align: center;
+  justify-self: center;
 }
 
-.brand-mark svg {
-  width: 46px;
-  height: 46px;
-  display: block;
+.cmt-acknowledgment-heading {
+  margin: 0 0 4px;
+  color: #000000;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-.site-header.scrolled .brand-mark,
-.site-header.scrolled .brand-mark svg {
-  width: 38px;
-  height: 38px;
+.cmt-acknowledgment p {
+  margin: 0;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.35;
 }
+
+
 
 .brand-text {
   display: flex;
@@ -222,11 +233,11 @@ body {
 
 /* ---- partner logos (Right Aligned) ---- */
 .partner-logos {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: flex-end; /* Aligns contents to the right */
-  margin-left: auto;
+  margin-left: 0;
 }
 
 .partner-logo {
@@ -265,7 +276,7 @@ body {
 
 /* Make the first image (IEM) noticeably bigger */
 .partner-logo:first-child img {
-  height: 70px !important; 
+  height: 5px !important; 
 }
 
 /* 60% Pop-out Hover Effect */
@@ -280,7 +291,7 @@ body {
 }
 
 .site-header.scrolled .partner-logo:first-child img {
-  height: 50px !important; 
+  height: 5px !important; 
 }
 
 .site-header.scrolled .partner-logo img {
@@ -647,6 +658,18 @@ body {
   .subtitle-line-2 {
     font-size: 9px;
   }
+
+  .cmt-acknowledgment {
+    width: min(100%, 330px);
+  }
+
+  .cmt-acknowledgment-heading {
+    font-size: 11px;
+  }
+
+  .cmt-acknowledgment p {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -666,7 +689,21 @@ body {
   }
 
   .logo-bar-inner {
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 6px;
     padding: 0 20px;
+  }
+
+  .cmt-acknowledgment {
+    width: 100%;
+  }
+
+  .partner-logos {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
   }
 
   .top-info-inner {
@@ -674,13 +711,13 @@ body {
   }
 
   body {
-    padding-top: 180px;
+    padding-top: 235px;
   }
 
   /* Match the header's tallest (unscrolled) height at this breakpoint so
      the panel never opens with its first item hidden/clipped behind it. */
   .mobile-menu {
-    padding-top: 180px;
+    padding-top: 235px;
   }
 }
 
@@ -690,6 +727,7 @@ body {
   }
 
   .logo-bar-inner {
+    grid-template-columns: auto minmax(0, 1fr);
     justify-content: center;
   }
 
@@ -713,7 +751,7 @@ body {
   }
 
   body {
-    padding-top: 116px;
+    padding-top: 195px;
   }
 
   .brand-title {
@@ -726,10 +764,12 @@ body {
   }
 
   .mobile-menu {
-    padding-top: 116px;
+    padding-top: 195px;
   }
 
   .logo-bar-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
     padding: 0 12px;
   }
 
@@ -741,5 +781,10 @@ body {
 
   .brand-text {
     min-width: 0;
+  }
+
+  .cmt-acknowledgment {
+    width: 100%;
+    padding-bottom: 6px;
   }
 }

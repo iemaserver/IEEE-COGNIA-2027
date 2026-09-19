@@ -3071,16 +3071,18 @@ button { border: none; cursor: pointer; font-family: inherit; }
 .submit-paper-title {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--navy-900);
   margin-bottom: 12px;
 }
-.submit-paper-text {
-  font-size: 15px;
-  color: black;
+.submit-paper-intro,
+.submit-paper-acknowledgment {
   max-width: 600px;
-  margin: 0 auto 36px;
+  margin: 0 auto 20px;
   line-height: 1.7;
+}
+.submit-paper-acknowledgment {
+  margin-bottom: 36px;
 }
 .submit-paper-steps {
   display: grid;
@@ -5366,5 +5368,3 @@ body {
 #contact {
   scroll-margin-top: 160px; /* Slightly more to ensure Venue is fully hidden */
 }
-
-
