@@ -21,7 +21,7 @@ export default function SubmitPaper() {
           <p className="submit-paper-acknowledgment">
             The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
           </p>
-          <a href="#" className="btn-primary">
+          <a href="https://cmt3.research.microsoft.com/COGNIA2027" target="_blank" rel="noopener noreferrer" className="btn-primary">
             Submit Paper
           </a>
         </div>
